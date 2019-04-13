@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<p>Click the button to add a new row at the first position of the table and then add cells and content.</p>
+
+<table id="myTable">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+    </tr>
+</table>
+<br>
+
+<div id="demo">test</div>
+<br>
+<div id="demo2">test2</div>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.innerHTML = "NEW CELL1";
+        cell2.innerHTML = "NEW CELL2";
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+      document.getElementById("demo2").innerHTML =
+      this.responseXML;
+    }
+  };
+  xhttp.open("GET", "http://localhost:8080/hello", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

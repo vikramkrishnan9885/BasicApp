@@ -1,0 +1,39 @@
+<!--  <!DOCTYPE html>
+<html>
+<body>
+
+<object width="400" height="400" data="embdedder.html">
+</object>
+ 
+</body>
+</html>
+-->
+<html> 
+  <head> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js""></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("embedder.html"); 
+    });
+    </script> 
+    <style>
+		body {
+		    background-color: lightblue;
+		}
+		
+		h1 {
+		    color: white;
+		    text-align: center;
+		}
+		
+		p {
+		    font-family: verdana;
+		    font-size: 20px;
+		}
+	</style>
+  </head> 
+
+  <body> 
+     <div id="includedContent"></div>
+  </body> 
+</html>

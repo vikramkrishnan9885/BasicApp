@@ -1,0 +1,9 @@
+person/interfaces/PersonDao.class
+launch/Main.class
+person/Persons.class
+serde/PersonSerdeImpl.class
+servlet/HelloServlet.class
+person/impl/Person.class
+serde/PersonSerde.class
+person/impl/DummyPersonDao.class
+servlet/PersonServlet.class
